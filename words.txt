@@ -1,0 +1,56 @@
+Tip
+backbone
+internally
+substitutions
+ensure
+However
+worth
+extension
+resolve
+
+handle
+direct
+through 
+assumes
+above 
+sample
+
+hassle
+deprecated
+concurrent
+interprets
+per
+treats
+determines
+Compared
+directly 
+claim - заявка или заявлять
+throws
+demand
+Avoiding
+Consider
+Prevent
+compelling
+expires
+
+
+layers
+slices
+entities
+definition
+
+
+
+диструктуризация
+
+//note 
+1. прочитать про Configuration Languages
+  https://webpack.js.org/configuration/configuration-languages/
+  https://www.typescriptlang.org/tsconfig#allowSyntheticDefaultImports
+  а именно про "module": "es6",
+2.
+    //почитать подробней
+    "module": "ES2020",
+3. шаблонный литерал
+4. react: createContext
+5. localStorage

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    //почитать подробней
+    "module": "ES2020",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    //esModuleInterop позволяет работать с пакетами которые используют commonjs как с обычными пакетами с помощью import(require() module.export) = common js
+    "esModuleInterop": true,
+    //если какая-либо библиотека не имеет default export, лоадеры вроде ts-loader или babel-loader автоматически создают их вместо такого ипорта
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
