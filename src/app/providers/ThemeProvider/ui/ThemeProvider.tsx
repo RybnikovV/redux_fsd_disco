@@ -1,9 +1,9 @@
 import React, { ReactElement, FC, useState} from 'react';
-import { ThemeContext, Theme } from './ThemeContext';
+import { ThemeContext, Theme } from '../lib/ThemeContext';
 
 const currentTheme = localStorage.getItem('currentTheme') as Theme;
 
-const ThemeProvider: FC<{children: ReactElement}> = ({ children }): ReactElement => {
+export const ThemeProvider: FC<{children: ReactElement}> = ({ children }): ReactElement => {
   const [theme, setTheme] = useState<Theme>(currentTheme || Theme.DARK);
 
   return (
@@ -15,6 +15,4 @@ const ThemeProvider: FC<{children: ReactElement}> = ({ children }): ReactElement
     </ThemeContext.Provider>
   )
 }
-
-export default ThemeProvider
 

@@ -1,10 +1,10 @@
 import { createRoot } from 'react-dom/client';
 import React from 'react';
-import { router } from './routes/router';
+import { router } from './app/routes/router';
 import {
   RouterProvider
 } from 'react-router-dom';
-import ThemeProvider from './theme/ThemeProvider';
+import { ThemeProvider } from 'app/providers/ThemeProvider';
 
 const root = createRoot(document.getElementById('root'));
 root.render(

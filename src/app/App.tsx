@@ -2,8 +2,8 @@ import React, { Suspense } from 'react';
 import 'reset-css';
 import './styles/index.scss';
 import { Link, Outlet } from 'react-router-dom';
-import { useTheme } from './theme/useTheme';
-import { clsNames } from './helpers/clsNames';
+import { useTheme } from './providers/ThemeProvider';
+import { clsNames } from 'shared/helpers';
 
 function App() {
   const { theme, changeTheme } = useTheme();

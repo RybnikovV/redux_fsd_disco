@@ -1,18 +1,19 @@
 import { createBrowserRouter } from 'react-router-dom';
-import {AboutAsync} from '../page/about/About.async';
 import App from '../App';
-import Error from '../page/error/error';
-import { ErrorLazy } from '../page/error/Error.async';
+import { ErrorPage } from 'pages/Error';
+import { AboutPage } from 'pages/About';
+
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <ErrorLazy />,
+    //Error компонент не работает с lazy
+    errorElement: <ErrorPage />,
     children: [
       {
         path: 'about',
-        element: <AboutAsync />,
+        element: <AboutPage />,
       }, {
         path: 'second',
         element: <div>second</div>

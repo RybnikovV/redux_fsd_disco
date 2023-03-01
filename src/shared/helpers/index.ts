@@ -1,0 +1,1 @@
+export { clsNames } from './lib/clsNames';

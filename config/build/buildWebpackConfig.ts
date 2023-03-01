@@ -24,6 +24,6 @@ export default function buildWebpackConfig(options: IBuildConfig): webpack.Confi
     module: {
       rules: getLoaders(options),
     },
-    resolve: getResolvers()
+    resolve: getResolvers(options)
   };
 }
