@@ -21,9 +21,6 @@ function App() {
           <li>
             <Link to={`second`}>second</Link>
           </li>
-          <li>
-            <Link to={`smth`}>err</Link>
-          </li>
         </ul>
       </nav>
       <button

@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import React from 'react';
-import { router } from './app/routes/router';
+import { router } from './app/router/routes/router';
 import {
   RouterProvider
 } from 'react-router-dom';
