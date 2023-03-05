@@ -1,11 +1,6 @@
-export interface classNameInputData {
-  mainCls: string;
-  mods?: Record<string, boolean>;
-  additional?: string[]
-};
+type ClsNames = (mainCls: string, mods?: Record<string, boolean>, additional?: string[]) => string;
 
-
-export const clsNames = ({mainCls, mods = {}, additional}: classNameInputData): string => {
+const clsNames: ClsNames = (mainCls, mods = {}, additional = []) => {
   const filtredMods = Object.entries(mods).filter(([name, value]) => {
     return value ? name : null
   }).map(([name]) => {
@@ -17,4 +12,6 @@ export const clsNames = ({mainCls, mods = {}, additional}: classNameInputData): 
     ...additional,
     ...filtredMods,
   ].join(' ');
-}
+};
+
+export { clsNames };

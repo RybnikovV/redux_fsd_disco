@@ -4,30 +4,18 @@ import './styles/index.scss';
 import { Link, Outlet } from 'react-router-dom';
 import { useTheme } from './providers/ThemeProvider';
 import { clsNames } from 'shared/helpers';
+import { Navbar } from 'widgets';
 
 function App() {
   const { theme, changeTheme } = useTheme();
 
   return (
-    <div className={clsNames({mainCls: 'app', additional: ['additionalClass', theme], mods: {kek: true, pek: false}})}>
-      <nav>
-        <ul>
-          <li>
-            <Link to={`/ `}>main</Link>
-          </li>
-          <li>
-            <Link to={`about`}>about</Link>
-          </li>
-          <li>
-            <Link to={`second`}>second</Link>
-          </li>
-        </ul>
-      </nav>
+    <div className={clsNames('app',  {kek: true, pek: false}, ['additionalClass', theme])}>
+      <Navbar/>
       <button
         onClick={() => {changeTheme()}}>
         change theme
       </button>
-      <div>smth text</div>
       <div>
         <Suspense fallback={<div>Загрузка...</div>}>
           <Outlet />

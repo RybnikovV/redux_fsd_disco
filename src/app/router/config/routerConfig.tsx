@@ -3,10 +3,10 @@ import { AboutPage } from 'pages/About';
 
 export const routerConfig = [
   {
-    path: routerPaths[AppRoute.About],
+    path: routerPaths[AppRoute.About].path,
     element: <AboutPage/>,
   }, {
-    path: routerPaths[AppRoute.SECOND],
+    path: routerPaths[AppRoute.Second].path,
     element: <div>second</div>,
   },
 ];
