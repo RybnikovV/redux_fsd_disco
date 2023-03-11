@@ -5,7 +5,7 @@ import { Link, LinkProps } from 'react-router-dom';
 
 export enum AppLinkTheme {
   INVERS = 'invers',
-  MAIN = ''
+  MAIN = '',
 };
 
 interface IAppLinkProps extends LinkProps {
@@ -25,7 +25,7 @@ export const AppLink: FC<IAppLinkProps> = (props) => {
 
   return (
     <Link 
-      className={clsNames(cls.appLink, {}, ['bla', cls[theme], 'bla']) + " " + className} 
+      className={clsNames(cls.appLink, {}, [cls[theme], className])} 
       to={to}
       {...otherProps}
       >

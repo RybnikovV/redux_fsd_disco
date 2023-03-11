@@ -1,0 +1,20 @@
+.button {
+  border: 0;
+  background-color: var(--bg-color-accent);
+  cursor: pointer;
+  padding: var(--space-m) var(--space-xl);
+  color: var(--color-accent);
+  &:hover {
+    opacity: .9;
+  }
+}
+
+.invers {
+  background-color: var(--bg-color-secondary);
+  color: var(--color-secondary);
+}
+
+.clear {
+  padding: 0;
+  background-color: transparent;
+}

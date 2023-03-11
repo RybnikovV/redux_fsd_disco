@@ -1,10 +1,5 @@
-@import url('./variables/global.scss');
-@import url('./themes/dark.scss');
-@import url('./themes/light.scss');
-
-.app {
-  height: 100vh;
-  background-color: var(--bg-color-primary);
-  font: var(--font-m);
-  color: var(--color-primary);
-}
+@import 'reset-css';
+@import './variables/global.scss';
+@import './themes/dark.scss';
+@import './themes/light.scss';
+@import './app';

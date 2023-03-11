@@ -9,7 +9,7 @@ const clsNames: ClsNames = (mainCls, mods = {}, additional = []) => {
 
   return [
     mainCls,
-    ...additional,
+    ...additional.filter(Boolean),
     ...filtredMods,
   ].join(' ');
 };

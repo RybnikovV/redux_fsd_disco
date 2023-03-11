@@ -35,13 +35,36 @@ export function getLoaders({ isDev }: IBuildConfig): webpack.RuleSetRule[] {
         }
       },
       // Compiles Sass to CSS
-      "sass-loader",
+      {
+        loader: "sass-loader",
+        options: {
+          // Prefer `dart-sass`
+          implementation: require("sass"),
+        },
+      }
     ],
+  };
+
+  const svgLoader = {
+    test: /\.svg$/i,
+    issuer: /\.[jt]sx?$/,
+    use: ['@svgr/webpack'],
+  };
+
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif)$/i,
+    loader: 'file-loader',
+    options: {
+      outputPath: isDev ? '' : 'assets/img',
+      name: isDev ? '[path][name].[ext]' : '[contenthash].[ext]',
+    }
   };
 
   return [
     tsLoader,
     cssLoader,
-    styleLoader
+    styleLoader,
+    svgLoader,
+    fileLoader,
   ]
 }

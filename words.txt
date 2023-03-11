@@ -38,6 +38,7 @@ layers
 slices
 entities
 definition
+proper
 
 
 

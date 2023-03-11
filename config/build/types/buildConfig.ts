@@ -4,7 +4,7 @@ export interface IPaths {
   entry: string;
   html: string;
   build: string;
-  absolutePath: string
+  absolutePath: string;
 };
 
 export interface IBuildConfig {
